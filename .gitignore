@@ -3,3 +3,6 @@ group_vars/windows.yml
 
 # Ansible retry files
 *.retry
+
+# Playbook Vars
+playbook_vars/*

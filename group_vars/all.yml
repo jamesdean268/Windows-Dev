@@ -1,8 +1,7 @@
-temp_dir: C:\WINRM\
+temp_dir: C:\Temp\Ansible\
 
 office_retries: 600
-
-NVIDIA_GPU: true
+NVIDIA_GPU: false
 
 git_user_name: Bob Example
 git_user_email: bob@example.com
