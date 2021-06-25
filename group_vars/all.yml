@@ -1,4 +1,5 @@
 temp_dir: C:\Temp\Ansible\
+ansible_python_interpreter: /usr/bin/python3
 
 office_retries: 600
 NVIDIA_GPU: false

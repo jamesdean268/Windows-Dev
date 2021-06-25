@@ -6,8 +6,8 @@
   win_get_url:
     url: "{{ office_url }}"
     dest: "{{ temp_dir }}OfficeSetup.exe"
-  async: 1000
-  poll: 0
+#  async: 1000
+#  poll: 0
 
 # - name: Download Visio 2016
 #   win_get_url:

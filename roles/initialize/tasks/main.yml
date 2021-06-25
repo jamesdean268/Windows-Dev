@@ -80,8 +80,8 @@
 #     data: 1
 #     type: dword
 
-- name: Restart explorer
-  win_command: Stop-Process -processname explorer
+# - name: Restart explorer
+#   win_command: Stop-Process -processname explorer
 
 - name: Install Chocolatey
   win_shell: Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))

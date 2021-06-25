@@ -1,8 +1,10 @@
 ---
 - name: Provisions Windows 10 Environment
   hosts: windows
-  strategy: debug
-  ignore_errors: True
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+#  strategy: debug
+#  ignore_errors: True
 #  become: yes
 #  become_method: runas
 #  become_user: Administrator
@@ -10,10 +12,10 @@
   roles:
     - initialize
     - office
-    - libraries
-    - tools
-    - git
-    - editors
-    - browsers
-    - cloud
-    - finalize
+#    - libraries
+#    - tools
+#    - git
+#    - editors
+#    - browsers
+#    - cloud
+#    - finalize
