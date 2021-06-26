@@ -37,12 +37,12 @@
     name: gcloudsdk
     state: latest
 
-- name: Install the latest and greatest HashiCorp utilities
-  win_chocolatey:
-    name: "{{ item }}"
-    state: latest
-  with_items:
-    - vagrant
-    - packer
-    - terraform
-    - vault
+# - name: Install the latest and greatest HashiCorp utilities
+#   win_chocolatey:
+#     name: "{{ item }}"
+#     state: latest
+#   with_items:
+#     - vagrant
+#     - packer
+#     - terraform
+#     - vault

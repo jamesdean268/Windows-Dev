@@ -11,11 +11,11 @@
     name: wget
     state: latest
 
-- name: Install the latest version of Spotify
-  win_chocolatey:
-    name: spotify
-    state: latest
-    ignore_checksums: yes
+# - name: Install the latest version of Spotify
+#   win_chocolatey:
+#     name: spotify
+#     state: latest
+#     ignore_checksums: yes
 
 - name: Install the latest and greatest Video tools
   win_chocolatey:
@@ -67,3 +67,32 @@
   win_chocolatey:
     name: google-backup-and-sync
     state: latest
+
+- name: Install the latest version of Discord
+  win_chocolatey:
+    name: discord
+    state: latest
+
+- name: Install the latest version of Zoom
+  win_chocolatey:
+    name: zoom
+    state: latest
+
+- name: Install the latest version of PowerBI
+  win_chocolatey:
+    name: powerbi
+    state: latest
+
+- name: Install the latest version of 7Zip
+  win_chocolatey:
+    name: 7zip
+    state: latest
+
+- name: Download Sync
+  win_get_url:
+    url: https://www.sync.com/download/win/sync-installer.exe
+    dest: "{{ temp_dir }}sync-installer.exe"
+
+## TODO
+# - TigerVPN
+# - Sticky Password
