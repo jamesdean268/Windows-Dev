@@ -9,6 +9,14 @@
 - name: Execute devmode.ps1
   win_shell: powershell -ExecutionPolicy Unrestricted -File "{{ temp_dir }}devmode.ps1"
 
+- name: Install WSL 2 msi package
+  ansible.windows.win_package:
+    path: https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+    state: present
+
+- name: Set default WSL to WSL 2
+  win_shell: wsl --set-default-version 2
+
 - name: Reboot since required
   win_reboot:
       reboot_timeout_sec: 3600
