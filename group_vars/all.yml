@@ -3,13 +3,3 @@ ansible_python_interpreter: /usr/bin/python3
 
 office_retries: 600
 NVIDIA_GPU: false
-
-git_user_name: Bob Example
-git_user_email: bob@example.com
-
-
-#win_update_categories:
-#  - CriticalUpdates
-#  - DefinitionUpdates
-#  - SecurityUpdates
-#  - Updates

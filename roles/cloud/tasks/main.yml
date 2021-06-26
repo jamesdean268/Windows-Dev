@@ -1,5 +1,5 @@
 ---
-  # Installs magical cloud things
+# Installs magical cloud things
 
 - name: Copy devmode.ps1
   win_copy:

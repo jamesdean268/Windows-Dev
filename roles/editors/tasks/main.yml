@@ -1,10 +1,5 @@
 ---
-  # Installs IDEs and Text Editors
-
-# - name: Install the latest version of Atom
-#   win_chocolatey:
-#     name: atom
-#     state: latest
+# Installs IDEs and Text Editors
 
 - name: Install the latest version of Git
   win_chocolatey:
@@ -36,13 +31,3 @@
     name: visualstudio2019community
     state: latest
 
-# miktex package is currently broken - still as of 10.3.18
-#- name: Install the latest version of TexStudio
-#  win_chocolatey:
-#    name: texstudio
-#    state: latest
-
-#- name: Install the latest version of texmaker
-#  win_chocolatey:
-#    name: texmaker
-#    state: latest

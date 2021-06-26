@@ -1,8 +1,3 @@
-############################################################
-# Powershell script to enable Hyper-V and Developer Mode
-# Author: Joshua Haupt josh@hauptj.com Date: 25.2.2018
-############################################################
-
 ##### Enable Developer Mode #####
 
 # Source: https://stackoverflow.com/questions/40033608/enable-windows-10-developer-mode-programmatically
@@ -26,5 +21,4 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-All -NoRest
 #Enable-WindowsOptionalFeature -FeatureName Microsoft-Windows-Subsystem-Linux -Online -All -NoRestart
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
-
 # Following steps in parent yml file

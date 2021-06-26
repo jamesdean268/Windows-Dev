@@ -6,6 +6,3 @@ group_vars/windows.yml
 
 # Office Vars
 roles/office/vars/*
-
-# Inventory
-inventory
