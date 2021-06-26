@@ -12,10 +12,10 @@
   roles:
     - initialize
     - office
-#    - libraries
-#    - tools
+    - libraries
+    - tools
 #    - git
-#    - editors
-#    - browsers
+    - editors
+    - browsers
 #    - cloud
 #    - finalize

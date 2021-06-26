@@ -1,11 +1,11 @@
 ---
   # Installs various tools and utilities
 
-- name: Install the latest version of openssh
-  win_chocolatey:
-    name: openssh
-    state: latest
-    params: SSHAgentFeature
+# - name: Install the latest version of openssh
+#   win_chocolatey:
+#     name: openssh
+#     state: latest
+#     params: SSHAgentFeature
 
 # - name: Install the latest version of cmder
 #   win_chocolatey:
@@ -39,28 +39,28 @@
     name: wget
     state: latest
 
-- name: Install the latest version of heidisql
-  win_chocolatey:
-    name: heidisql
-    state: latest
+# - name: Install the latest version of heidisql
+#   win_chocolatey:
+#     name: heidisql
+#     state: latest
 
-- name: Install the latest PDF Utilites
-  win_chocolatey:
-    name: "{{ item }}"
-    state: latest
-  with_items:
-    - sumatrapdf.install
-    - pdfcreator
+# - name: Install the latest PDF Utilites
+#   win_chocolatey:
+#     name: "{{ item }}"
+#     state: latest
+#   with_items:
+#     - sumatrapdf.install
+#     - pdfcreator
 
-- name: Install the latest version of calibre
-  win_chocolatey:
-    name: calibre
-    state: latest
+# - name: Install the latest version of calibre
+#   win_chocolatey:
+#     name: calibre
+#     state: latest
 
-- name: Install the latest version of foobar2000
-  win_chocolatey:
-    name: foobar2000
-    state: latest
+# - name: Install the latest version of foobar2000
+#   win_chocolatey:
+#     name: foobar2000
+#     state: latest
 
 - name: Install the latest version of Spotify
   win_chocolatey:
@@ -73,40 +73,61 @@
     name: "{{ item }}"
     state: latest
   with_items:
-    - ffmpeg
-    - winff
     - openshot
-    - activepresenter
-    - k-litecodecpackmega
     - vlc
+#    - activepresenter
+#    - k-litecodecpackmega
+#    - ffmpeg
+#    - winff
+
 
 - name: Install the latest and greatest Image tools
   win_chocolatey:
     name: "{{ item }}"
     state: latest
   with_items:
-    - imagemagick
     - greenshot
     - gimp
-    - irfanview
-    - irfanviewplugins
+#    - imagemagick
+#    - irfanview
+#    - irfanviewplugins
 
-- name: Install the latest version of HexChat
-  win_chocolatey:
-    name: hexchat
-    state: latest
+# - name: Install the latest version of HexChat
+#   win_chocolatey:
+#     name: hexchat
+#     state: latest
 
 - name: Install the latest version of Steam
   win_chocolatey:
     name: steam
     state: latest
 
-- name: Install the latest version of Teamviewer
+- name: Install the latest version of Unity-Hub
   win_chocolatey:
-    name: teamviewer
+    name: unity-hub
     state: latest
 
-- name: Install the latest version of Skype
+- name: Install the latest version of Blender
   win_chocolatey:
-    name: skype
+    name: blender
+    state: latest
+
+# - name: Install the latest version of Teamviewer
+#   win_chocolatey:
+#     name: teamviewer
+#     state: latest
+
+# - name: Install the latest version of Skype
+#   win_chocolatey:
+#     name: skype
+#     state: latest
+
+- name: Install the latest version of TightVNC
+  win_chocolatey:
+    name: tightvnc
+    state: latest
+
+- name: Install the latest version of Search Everything
+  win_chocolatey:
+    name: everything
     state: latest
