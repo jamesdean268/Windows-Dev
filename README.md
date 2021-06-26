@@ -17,6 +17,8 @@ net stop sshd
 net start sshd
 ```
 
+Ensure sshd is enabled upon start up
+
 ## Ansible Host Setup
 On the Ansible host, create your ssh keys:
 `ssh-keygen`
@@ -37,3 +39,9 @@ $acl | Set-Acl
 
 Refer for details:
 https://superuser.com/questions/1342411/setting-ssh-keys-on-windows-10-openssh-server
+
+# Usage
+To run the Ansible Playbook, use the following command:
+`ansible-playbook -i ./inventory -u james win_dev.yml -v`
+
+
