@@ -17,16 +17,21 @@ net stop sshd
 net start sshd
 ```
 
-Ensure sshd is enabled upon start up
+Ensure sshd is enabled upon start up:
+
+`Set-Service sshd -StartupType Automatic`
 
 ## Ansible Host Setup
 On the Ansible host, create your ssh keys:
+
 `ssh-keygen`
 
 Copy the public ssh key to the windows host administrator_authorized_keys file:
+
 `scp ~/.ssh/rsa_id.pub user@windowsip:"C:\ProgramData\ssh\administrators_authorized_keys`
 
 Set permissions using the script below to allow the remote user to run in powershell admin:
+
 ```
 $acl = Get-Acl C:\ProgramData\ssh\administrators_authorized_keys
 $acl.SetAccessRuleProtection($true, $false)
@@ -42,6 +47,7 @@ https://superuser.com/questions/1342411/setting-ssh-keys-on-windows-10-openssh-s
 
 # Usage
 To run the Ansible Playbook, use the following command:
+
 `ansible-playbook -i ./inventory -u james win_dev.yml -v`
 
 
