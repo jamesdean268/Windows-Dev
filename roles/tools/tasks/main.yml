@@ -48,10 +48,10 @@
     name: blender
     state: latest
 
-- name: Install the latest version of Teamviewer
-  win_chocolatey:
-    name: teamviewer
-    state: latest
+# - name: Install the latest version of Teamviewer
+#   win_chocolatey:
+#     name: teamviewer
+#     state: latest
 
 # - name: Install the latest version of Skype
 #   win_chocolatey:
@@ -82,16 +82,17 @@
   win_chocolatey:
     name: powerbi
     state: latest
+    ignore_checksums: yes
 
 - name: Install the latest version of 7Zip
   win_chocolatey:
     name: 7zip
     state: latest
 
-- name: Download Sync
-  win_get_url:
-    url: https://www.sync.com/download/win/sync-installer.exe
-    dest: "{{ temp_dir }}sync-installer.exe"
+# - name: Download Sync
+#   win_get_url:
+#     url: https://www.sync.com/download/win/sync-installer.exe
+#     dest: "{{ temp_dir }}sync-installer.exe"
 
 ## TODO
 # - TigerVPN
