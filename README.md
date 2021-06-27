@@ -28,7 +28,7 @@ On the Ansible host, create your ssh keys:
 
 Copy the public ssh key to the windows host administrator_authorized_keys file:
 
-`scp ~/.ssh/rsa_id.pub user@windowsip:"C:\ProgramData\ssh\administrators_authorized_keys`
+`scp ~/.ssh/id_rsa.pub user@windowsip:"C:\ProgramData\ssh\administrators_authorized_keys`
 
 Set permissions using the script below to allow the remote user to run in powershell admin:
 
