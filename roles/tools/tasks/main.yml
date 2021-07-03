@@ -89,6 +89,11 @@
     name: 7zip
     state: latest
 
+- name: Install the latest version of Adobe Reader
+  win_chocolatey:
+    name: adobereader
+    state: latest
+
 # - name: Download Sync
 #   win_get_url:
 #     url: https://www.sync.com/download/win/sync-installer.exe
