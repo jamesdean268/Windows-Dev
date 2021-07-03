@@ -1,0 +1,2 @@
+[windows]
+<<IP Address>> ansible_connection=ssh ansible_shell_type=powershell

@@ -1,5 +1,5 @@
 ---
-  # Installs magical cloud things
+# Installs magical cloud things
 
 - name: Copy devmode.ps1
   win_copy:
@@ -8,6 +8,14 @@
 
 - name: Execute devmode.ps1
   win_shell: powershell -ExecutionPolicy Unrestricted -File "{{ temp_dir }}devmode.ps1"
+
+- name: Install WSL 2 msi package
+  ansible.windows.win_package:
+    path: https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+    state: present
+
+- name: Set default WSL to WSL 2
+  win_shell: wsl --set-default-version 2
 
 - name: Reboot since required
   win_reboot:
@@ -29,12 +37,12 @@
     name: gcloudsdk
     state: latest
 
-- name: Install the latest and greatest HashiCorp utilities
-  win_chocolatey:
-    name: "{{ item }}"
-    state: latest
-  with_items:
-    - vagrant
-    - packer
-    - terraform
-    - vault
+# - name: Install the latest and greatest HashiCorp utilities
+#   win_chocolatey:
+#     name: "{{ item }}"
+#     state: latest
+#   with_items:
+#     - vagrant
+#     - packer
+#     - terraform
+#     - vault

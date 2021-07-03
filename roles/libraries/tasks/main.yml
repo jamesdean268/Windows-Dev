@@ -1,5 +1,5 @@
 ---
-  # Installs programming language and libraries
+# Installs programming language and libraries
 
 - name: Install the latest and greatest of Python
   win_chocolatey:
@@ -33,11 +33,6 @@
     state: latest
   with_items:
     - jdk8
-    - jdk9
     - maven
     - gradle
 
-#- name: Install the latest version of miktex LaTex
-#  win_chocolatey:
-#    name: miktex
-#    state: latest

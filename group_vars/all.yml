@@ -1,15 +1,5 @@
-temp_dir: C:\WINRM\
+temp_dir: C:\Temp\Ansible\
+ansible_python_interpreter: /usr/bin/python3
 
 office_retries: 600
-
-NVIDIA_GPU: true
-
-git_user_name: Bob Example
-git_user_email: bob@example.com
-
-
-#win_update_categories:
-#  - CriticalUpdates
-#  - DefinitionUpdates
-#  - SecurityUpdates
-#  - Updates
+NVIDIA_GPU: false
