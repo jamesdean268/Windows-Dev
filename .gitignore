@@ -6,3 +6,7 @@ group_vars/windows.yml
 
 # Office Vars
 roles/office/vars/*
+
+# Dev environment files
+.vscode
+.devcontainer
