@@ -68,9 +68,9 @@
     name: everything
     state: latest
 
-- name: Install the latest version of Google Backup and Sync
+- name: Install the latest version of Google Drive
   win_chocolatey:
-    name: google-backup-and-sync
+    name: googledrive
     state: latest
 
 - name: Install the latest version of Discord
