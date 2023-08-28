@@ -1,18 +1,22 @@
 ---
 # Installs magical cloud things
 
-- name: Copy devmode.ps1
-  win_copy:
-    src: files/devmode.ps1
-    dest: "{{ temp_dir }}"
+# - name: Copy devmode.ps1
+#   win_copy:
+#     src: files/devmode.ps1
+#     dest: "{{ temp_dir }}"
 
-- name: Execute devmode.ps1
-  win_shell: powershell -ExecutionPolicy Unrestricted -File "{{ temp_dir }}devmode.ps1"
+# - name: Execute devmode.ps1
+#   win_shell: powershell -ExecutionPolicy Unrestricted -File "{{ temp_dir }}devmode.ps1"
 
-- name: Install WSL 2 msi package
-  ansible.windows.win_package:
-    path: https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
-    state: present
+# - name: Install WSL 2 msi package
+#   ansible.windows.win_package:
+#     path: https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+#     state: present
+
+# WSL Installation per: https://learn.microsoft.com/en-us/windows/wsl/install
+- name: Set default WSL to WSL 2
+  win_shell: wsl --install
 
 - name: Set default WSL to WSL 2
   win_shell: wsl --set-default-version 2
@@ -28,14 +32,14 @@
     name: "{{ item }}"
     state: latest
   with_items:
-    - docker-for-windows
+    - docker-desktop
     - docker-compose
     - minikube
 
-- name: Install the latest version of Google Cloud SDK
-  win_chocolatey:
-    name: gcloudsdk
-    state: latest
+# - name: Install the latest version of Google Cloud SDK
+#   win_chocolatey:
+#     name: gcloudsdk
+#     state: latest
 
 # - name: Install the latest and greatest HashiCorp utilities
 #   win_chocolatey:

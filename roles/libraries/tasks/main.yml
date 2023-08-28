@@ -9,23 +9,23 @@
     - python2
     - python3
 
-- name: Install the latest version of Ruby
-  win_chocolatey:
-    name: ruby
-    state: latest
+# - name: Install the latest version of Ruby
+#   win_chocolatey:
+#     name: ruby
+#     state: latest
 
-- name: Install the latest and greatest of NodeJS
-  win_chocolatey:
-    name: "{{ item }}"
-    state: latest
-  with_items:
-    - nodejs
-    - yarn
+# - name: Install the latest and greatest of NodeJS
+#   win_chocolatey:
+#     name: "{{ item }}"
+#     state: latest
+#   with_items:
+#     - nodejs
+#     - yarn
 
-- name: Install the latest version of golang
-  win_chocolatey:
-    name: golang
-    state: latest
+# - name: Install the latest version of golang
+#   win_chocolatey:
+#     name: golang
+#     state: latest
 
 - name: Install the latest and greatest of Java
   win_chocolatey:
@@ -34,5 +34,5 @@
   with_items:
     - jdk8
     - maven
-    - gradle
+#    - gradle
 

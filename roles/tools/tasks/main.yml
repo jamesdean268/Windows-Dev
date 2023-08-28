@@ -1,15 +1,15 @@
 ---
   # Installs various tools and utilities
 
-- name: Install the latest version of curl
-  win_chocolatey:
-    name: curl
-    state: latest
+# - name: Install the latest version of curl
+#   win_chocolatey:
+#     name: curl
+#     state: latest
 
-- name: Install the latest version of wget
-  win_chocolatey:
-    name: wget
-    state: latest
+# - name: Install the latest version of wget
+#   win_chocolatey:
+#     name: wget
+#     state: latest
 
 # - name: Install the latest version of Spotify
 #   win_chocolatey:
@@ -17,21 +17,26 @@
 #     state: latest
 #     ignore_checksums: yes
 
-- name: Install the latest and greatest Video tools
-  win_chocolatey:
-    name: "{{ item }}"
-    state: latest
-  with_items:
-    - openshot
-    - vlc
+# - name: Install the latest and greatest Video tools
+#   win_chocolatey:
+#     name: "{{ item }}"
+#     state: latest
+#   with_items:
+#     - openshot
+#     - vlc
 
-- name: Install the latest and greatest Image tools
+# - name: Install the latest and greatest Image tools
+#   win_chocolatey:
+#     name: "{{ item }}"
+#     state: latest
+#   with_items:
+#     - greenshot
+#     - gimp
+
+- name: Install the latest version of Gimp
   win_chocolatey:
-    name: "{{ item }}"
+    name: gimp
     state: latest
-  with_items:
-    - greenshot
-    - gimp
 
 - name: Install the latest version of Steam
   win_chocolatey:
@@ -73,10 +78,10 @@
     name: discord
     state: latest
 
-- name: Install the latest version of Zoom
-  win_chocolatey:
-    name: zoom
-    state: latest
+# - name: Install the latest version of Zoom
+#   win_chocolatey:
+#     name: zoom
+#     state: latest
 
 - name: Install the latest version of PowerBI
   win_chocolatey:

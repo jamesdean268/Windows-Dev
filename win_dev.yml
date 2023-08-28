@@ -11,10 +11,10 @@
 
   roles:
     - initialize
-    - office
+#    - office        # Installing office manually for 2019 version
     - libraries
     - tools
     - editors
-    - browsers
+#    - browsers      # No additional browsers needed at this time
     - cloud
     - finalize

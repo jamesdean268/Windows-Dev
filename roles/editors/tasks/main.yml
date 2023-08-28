@@ -26,8 +26,8 @@
 #     name: vim
 #     state: latest
 
-- name: Install the latest version of visualstudio2019community
+- name: Install the latest version of visualstudio2022community
   win_chocolatey:
-    name: visualstudio2019community
+    name: visualstudio2022community
     state: latest
 
